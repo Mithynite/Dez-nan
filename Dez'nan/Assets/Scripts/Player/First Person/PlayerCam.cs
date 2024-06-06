@@ -10,13 +10,7 @@ public class PlayerCam : MonoBehaviour
     float rotationY;
     public Transform orientation;
     private Vector3 position;
-    //private WallRun wallRunScript;
-    [SerializeField] PlayerCam c;
     [SerializeField] GameObject player;
-    void Awake()
-    {
-        //wallRunScript = player.GetComponent<WallRun>();
-    }
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -25,15 +19,15 @@ public class PlayerCam : MonoBehaviour
    
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivityX; 
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivityY;
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivityX; // TODO Citlivost myši na ose X 
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivityY; // TODO Citlivost myši na ose Y
 
         rotationX -= mouseY;
         rotationY += mouseX;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 90f); // TODO Omezení pohledu Hráče, aby nemohl "přetočit kameru"
 
-        transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);//otočení kamery
-        orientation.rotation = Quaternion.Euler(0, rotationY, 0); //posun hráče po ose Y
+        transform.rotation = Quaternion.Euler(rotationX, rotationY, 0); // TODO Otočení kamery
+        orientation.rotation = Quaternion.Euler(0, rotationY, 0); // TODO Posun hráče po ose Y
         transform.position = orientation.position;
     }
 }

@@ -25,6 +25,7 @@ public class PlayerBehaviorVariables : ScriptableObject
 	public int coins;
     public int maxHealth;
 
+    // TODO Obnovení hodnot na původní
     public void ResetValues()
     {
 	    walkingSpeed = 5f;

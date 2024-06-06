@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class MortarTower : Tower
 {
-private GameObject[] enemies;
-private GameObject[] targets;
+private GameObject[] enemies; // TODO Pole pro uložení nepřatel
+private GameObject[] targets; // TODO Pole pro uložení cílů Mortaru
+
+// TODO Předělaná metoda pro hledání cílů věže, tak aby mohla najít více nepřátel vrátit
 private IEnumerable<GameObject> UpdateForTargets()
 {
-    enemies = GameObject.FindGameObjectsWithTag(enemyTag); // Vytvoření pole nepřátel, kteří jsou vyhledáni podle Tagu
+    enemies = GameObject.FindGameObjectsWithTag(enemyTag); // TODO Vytvoření pole nepřátel, kteří jsou vyhledáni podle Tagu
     
     if(enemies.Length > 0){
-        foreach (GameObject enemy in enemies) //Procházení pole nepřátel
+        foreach (GameObject enemy in enemies) // TODO Procházení pole nepřátel
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position); // Vzdálenost věže od nepřítele
-            if(distanceToEnemy <= range)
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position); // TODO Vzdálenost věže od nepřítele
+            if(distanceToEnemy <= range) // TODO Kontrola, jestli je nepřítel v rámci dostřelu věže (jeho vzdálenosti od věže)
             {   
-                yield return enemy;
+                yield return enemy; // TODO Vrácení najitého nepřítele
             }
         }
     }
 }
 
+// TODO Uložení nepřátel do pole
 private void SetTargets()
 {
-    targets = UpdateForTargets().ToArray();
+    targets = UpdateForTargets().ToArray(); // TODO Převedení vrácených cílů do pole
 }
 
 void Start()
 {
-    InvokeRepeating("SetTargets", 1f, 4f);
+    InvokeRepeating("SetTargets", 2f, 4f); // TODO Opakování metody "SetTargets()" po 2s a následně každé 4s
     Shoot();
 }
+
+// TODO Přepsaná metoda Shoot(), aby dokázala dát poškození rovnoměrně každému najitému nepříteli
 public override void Shoot()
 {
     if(targets != null && targets.Length > 0)
@@ -40,7 +45,7 @@ public override void Shoot()
         {
             if(enemy != null)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(damage);
+                enemy.GetComponent<Enemy>().TakeDamage(damage); // TODO Použití metody "TakeDamage(...)" ze třídy Enemy pro udělení poškození nepříteli 
             }
         }
     }

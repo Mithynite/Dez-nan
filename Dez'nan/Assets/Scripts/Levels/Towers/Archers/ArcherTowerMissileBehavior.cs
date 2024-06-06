@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ArcherTowerMissileBehavior : MissileBehavior
 {
-    private ArcherTower at; //reference na ArcherTower script
-    private Vector3 targetPosition; // cíl (nepřítel)
-    private float missileSpeed; // rychlost prefabu
-
+    private ArcherTower at; // TODO reference na ArcherTower script
+    private Vector3 targetPosition; // TODO cíl (nepřítel)
+    private float missileSpeed; // TODO rychlost prefabu
+    
+// TODO Nastavení cílové pozice prefabu 
  public void SetTarget(Vector3 target, float speed)
     {
         targetPosition = target;
@@ -15,6 +16,7 @@ public class ArcherTowerMissileBehavior : MissileBehavior
     }
 void Start()
 {
+    // TODO Nastavení příslušných atributů z dané věže ("ArcherTower")
     at = FindObjectOfType<ArcherTower>();
     damage = at.damage;
     speed = at.missileSpeed;
@@ -25,19 +27,20 @@ void Start()
             return;
         }
 
-        // Výpočet, kterým směrem musí prefab letět
+        // TODO Výpočet, kterým směrem musí prefab letět
         Vector3 direction = (targetPosition - transform.position).normalized;
 
-        // Aplikování rychlosti na prefab
+        // TODO Aplikování rychlosti na prefab
         GetComponent<Rigidbody>().velocity = direction * missileSpeed;
 }
 
+// TODO Pokud je tag kolidujícího objektu roven cílovému tagu, tak se provede akce ubrání života Nepříteli
 void OnCollisionEnter(Collision coll)
 {
-    if(coll.gameObject.tag == tag){
+    if(coll.gameObject.tag.Equals(tag)){
         coll.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-    }
-            Destroy(gameObject);
+    } 
+    Destroy(gameObject);
 }
 
 }

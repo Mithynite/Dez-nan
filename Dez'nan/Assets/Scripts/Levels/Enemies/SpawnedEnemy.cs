@@ -5,12 +5,13 @@ using UnityEngine;
 
 [System.Serializable]
 
+// TODO Tato třída symbolizu nepřátele, kteří se mají spawnovat v rámci Wave
 public class SpawnedEnemy
 {
     [SerializeField] private GameObject _prefab;
     [SerializeField] private string _name;
     public int amount;
-
+    
     public string name => _name;
 
     public GameObject prefab => _prefab;

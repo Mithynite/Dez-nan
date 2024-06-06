@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAttributesArray:
   - name: Archers
-    cost: 12
+    cost: 20
   - name: Mortar
-    cost: 22
+    cost: 35
   - name: Mage
-    cost: 17
+    cost: 15
   - name: GoldMine
-    cost: 5
+    cost: 15

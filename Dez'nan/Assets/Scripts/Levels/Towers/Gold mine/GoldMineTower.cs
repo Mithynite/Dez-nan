@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoldMineTower : MonoBehaviour
+public class GoldMineTower : Tower
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int coinIncrease;
+    [SerializeField] private PlayerBehaviorVariables playerBehaviorVariables;
+    
+    public override void Shoot()
     {
-        
+        PlayerInterface.AddCoins(coinIncrease);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        CallShooting();
     }
 }

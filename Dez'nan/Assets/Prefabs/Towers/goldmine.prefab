@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3345077686052288181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 173.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.36
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 207.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.02951044
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0061758934
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.96069735
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.27595586
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_Name
+      value: goldmine
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      propertyPath: m_TagString
+      value: GoldMine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3849743230852723860}
+  m_SourcePrefab: {fileID: 100100000, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+--- !u!1 &2498780633832508388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb6d3650b52929d46bdc937a29bc4890, type: 3}
+  m_PrefabInstance: {fileID: 3345077686052288181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3849743230852723860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498780633832508388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636a2212d0bcf23428a307db7ddc6486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  turnSpeed: 0
+  repeationSpeed: 5
+  _damage: 0
+  _missileSpeed: 0
+  towerAttributes: {fileID: 11400000, guid: 07d5a244558441c46a90647e3ba63667, type: 2}
+  shootPoint: {fileID: 0}
+  enemyTag: 
+  missilePrefab: {fileID: 0}
+  objectToRotate: {fileID: 0}
+  coinIncrease: 1
+  playerBehaviorVariables: {fileID: 11400000, guid: 71eeab33b279bd940a678bb7885dac6a, type: 2}

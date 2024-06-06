@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -399,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a65ed0ee663f14b8098ca1f76834cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptTextKey: 101
   XSpawnRange: 10
   ZSpawnRange: 10
   variables: {fileID: 11400000, guid: 71eeab33b279bd940a678bb7885dac6a, type: 2}
@@ -408,35 +409,35 @@ MonoBehaviour:
     enemies:
     - _prefab: {fileID: 6910959336785435698, guid: 92b0d7bbb00b04f4baf3635bb2e925d5, type: 3}
       _name: Goblin
-      amount: 1
+      amount: 5
     - _prefab: {fileID: 5831367833806575117, guid: 13599d098f47d7b458dae59f126c82a0, type: 3}
       _name: Dark Knight
-      amount: 1
+      amount: 5
     - _prefab: {fileID: 3551301747815843074, guid: 589b5df8f1191b54193957561c718611, type: 3}
       _name: Orc
-      amount: 1
+      amount: 2
   - DelayBetweenSpawn: 2
     enemies:
     - _prefab: {fileID: 6910959336785435698, guid: 92b0d7bbb00b04f4baf3635bb2e925d5, type: 3}
       _name: Goblin
-      amount: 1
+      amount: 10
     - _prefab: {fileID: 3551301747815843074, guid: 589b5df8f1191b54193957561c718611, type: 3}
       _name: Orc
-      amount: 1
+      amount: 10
     - _prefab: {fileID: 5831367833806575117, guid: 13599d098f47d7b458dae59f126c82a0, type: 3}
       _name: Dark Knight
-      amount: 1
+      amount: 3
   - DelayBetweenSpawn: 2
     enemies:
     - _prefab: {fileID: 6910959336785435698, guid: 92b0d7bbb00b04f4baf3635bb2e925d5, type: 3}
       _name: Goblin
-      amount: 1
+      amount: 5
     - _prefab: {fileID: 3551301747815843074, guid: 589b5df8f1191b54193957561c718611, type: 3}
       _name: Orc
-      amount: 1
+      amount: 20
     - _prefab: {fileID: 5831367833806575117, guid: 13599d098f47d7b458dae59f126c82a0, type: 3}
       _name: Dark Knight
-      amount: 1
+      amount: 5
   textToPress: {fileID: 4491347392880935179}
   endscreenPanel: {fileID: 4712703653943425247}
   endscreenMessage: {fileID: 2548020341847239679}
@@ -704,9 +705,9 @@ MonoBehaviour:
   buildMenuPanel: {fileID: 6144194167596874081}
   towerPrefabs:
   - {fileID: 3189840570914378805, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-  - {fileID: 2669523911818093330, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5468719899930754321, guid: c75c40011f3cebd4f9fedbb066f17dc0, type: 3}
+  - {fileID: 3809180214928685359, guid: 09f41f81b2ffe6b45a5e7bbb3ac8cbd6, type: 3}
+  - {fileID: 2498780633832508388, guid: c81e33c0063a39647b6a8d73f13d1ae7, type: 3}
   archerTowerPriceObject: {fileID: 2017399161633126246}
   mortarTowerPriceObject: {fileID: 281987079500404651}
   mageTowerPriceObject: {fileID: 7158649590595609988}
@@ -897,7 +898,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1105,7 +1106,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

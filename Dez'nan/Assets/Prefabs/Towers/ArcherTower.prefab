@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e02025d5e2bfbbd4fb78734274894ed0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 2215975781257059530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.26, z: 0.64}
+  m_LocalPosition: {x: 0, y: 0.26, z: 1.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 241.8, y: 2.94, z: 11.1}
-  m_LocalScale: {x: 4.4012, y: 4.4012, z: 4.4012}
+  m_LocalScale: {x: 1.72439, y: 1.72439, z: 1.72439}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7341721425628741650}
@@ -201,7 +201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1fb179f94f33dd74aadab881f97d6229, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,7 +266,6 @@ MonoBehaviour:
   enemyTag: Enemy
   missilePrefab: {fileID: 5458138475556250084, guid: d95363b08def931468c300ef2a2e4b9a, type: 3}
   objectToRotate: {fileID: 7341721425628741650}
-  target: {fileID: 0}
 --- !u!1 &7254528539645028686
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3235b83ab0dacb243b048d869b5a55c1, type: 2}
+  - {fileID: 2100000, guid: f911735e2c28ac945beacdb0d1a58810, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 public class BuildMenu : MonoBehaviour
 {
     public static bool IsActive { get; private set; }
-    public static GameObject SelectedTowergGameObject { get; private set; }
+    public static GameObject SelectedTowergGameObject { get; private set; } // TODO Uložení prefabu Věže, kterou Hráč v Build Menu zvolil
     public static int SelectedTowerPrice { get; private set; }
 
 [Header("Refferences")]
@@ -12,7 +12,7 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] private GameObject buildMenuPanel;
     [SerializeField] private GameObject[] towerPrefabs;
     
-    //[SerializeField] private TextMeshProUGUI[] towerPriceObjects; TODO AdjustPriceTexts() --> tohle pole se odkazuje se na null
+    //[SerializeField] private TextMeshProUGUI[] towerPriceObjects; AdjustPriceTexts() --> tohle pole se z nějakého důvodu ukazuje jako null
     [SerializeField] private TextMeshProUGUI archerTowerPriceObject;
     [SerializeField] private TextMeshProUGUI mortarTowerPriceObject;
     [SerializeField] private TextMeshProUGUI mageTowerPriceObject;
@@ -39,17 +39,17 @@ public class BuildMenu : MonoBehaviour
         }
     }
 
-    // Metoda pro otevření Build menu
+    // TODO Metoda pro otevření Build menu
     public void OpenBuildMenu()
     {
         buildMenuPanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         IsActive = true;
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; // TODO Zastavení běhu hry, aby Hráč např. nemohl střílet, když kliká do menu
     }
 
-    // Metoda pro zavření Build menu
+    // TODO Metoda pro zavření Build menu
     public void CloseBuildMenu()
     {
         buildMenuPanel.SetActive(false);
@@ -59,7 +59,8 @@ public class BuildMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    private void AdjustPriceTexts() //TODO nevypadá moc dobře
+    // TODO Nastavení cen Věží do textů v obchodu
+    private void AdjustPriceTexts() //nevypadá moc dobře
     {
         archerTowerPriceObject.text = towerAttributes.towerAttributesArray[0].cost.ToString();
         mortarTowerPriceObject.text = towerAttributes.towerAttributesArray[1].cost.ToString(); 
@@ -67,6 +68,7 @@ public class BuildMenu : MonoBehaviour
         goldMineTowerPriceObject.text = towerAttributes.towerAttributesArray[3].cost.ToString();
     }
 
+    // TODO Uložení prefabu Věže do proměnné, pokud má Hráč dostatek peněz
     private void BuildTower(int index)
     {
         if (PlayerInterface.Coins >= towerAttributes.towerAttributesArray[index].cost)
@@ -84,6 +86,4 @@ public class BuildMenu : MonoBehaviour
     public void BuildMortarTower() => BuildTower(1);
     public void BuildMageTower() => BuildTower(2);
     public void BuildGoldMineTower() => BuildTower(3);
-    
-    
 }

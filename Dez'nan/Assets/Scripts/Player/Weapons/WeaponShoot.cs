@@ -6,7 +6,7 @@ public class WeaponShoot : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] protected Transform cam;
-    [SerializeField] protected Transform shootPoint;
+    [SerializeField] protected Transform shootPoint; // TODO Pozice odkud bude projektil létat
     [SerializeField] protected GameObject bulletPrefab;
     [SerializeField] protected GameObject player;
     protected Rigidbody playerRigidbody;
@@ -39,14 +39,11 @@ public class WeaponShoot : MonoBehaviour
     {
         readyToShoot = false;
 
-        // instantiate object to shoot
-        GameObject projectile = Instantiate(bulletPrefab, shootPoint.position, cam.rotation);
-
-        // get rigidbody component
+        GameObject projectile = Instantiate(bulletPrefab, shootPoint.position, cam.rotation); // TODO Tvorba projektilu
+        
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
-        // calculate direction
-        Vector3 forceDirection = cam.transform.forward;
+        Vector3 forceDirection = cam.transform.forward; // TODO Směr, kudy má projektil letět
 
         RaycastHit hit;
 
@@ -55,19 +52,15 @@ public class WeaponShoot : MonoBehaviour
             forceDirection = (hit.point - shootPoint.position).normalized;
         }
 
-        // add force
         Vector3 forceToAdd = forceDirection * shootForce + transform.up * shootUpwardForce;
 
-        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+        projectileRb.AddForce(forceToAdd, ForceMode.Impulse); // TODO Udělení příslušné síly projektilu
 
-        // implement cooldown
-        Invoke(nameof(ResetShooting), cooldown);
+        Invoke(nameof(ResetShooting), cooldown); // TODO Vyvolání funkce pro obnovení možnosti vyetřelit po uplynutí cooldownu
     }
 
     protected void ResetShooting()
     {
         readyToShoot = true;
     }
-    
-    
 }

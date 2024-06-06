@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShopMenu : MonoBehaviour
 {
-    public static bool isActive = false;
+    public static bool isActive;
 
     [Header("Controls")]
     [SerializeField] private KeyCode openKey = KeyCode.B;
@@ -16,7 +16,7 @@ public class ShopMenu : MonoBehaviour
 
     [SerializeField] private int towerCostChange;
 
-    [SerializeField] private int diamondDecrease;
+    [SerializeField] private int diamondDecrease; // TODO Počet odečtených diamantů za nákup vylepšení
 
     [Header("Refferences")]
     [SerializeField] private UniversalTowerAttributes towerAttributes;
@@ -56,11 +56,15 @@ public class ShopMenu : MonoBehaviour
         isActive = false;
         Time.timeScale = 1f;
     }
+    
+    // TODO Odečtení diamantů
     private void DeductDiamonds(int amount)
     {
         variables.diamonds -= amount;
-        playerInterface.ChangeDiamondText();
+        playerInterface.ChangeDiamondText(); // TODO Aktualizování textu pro počet diamantů v rozhraní
     }
+    
+    // TODO Nakoupení vylepšení léčení
     public void BuyHealthUpgrade()
     {
         if(variables.diamonds > 0)
@@ -69,6 +73,8 @@ public class ShopMenu : MonoBehaviour
             DeductDiamonds(diamondDecrease);
         }
     }
+    
+    // TODO Nakoupení vylepšení rychlosti hráče
     public void BuySpeedUpgrade()
     {
         if(variables.diamonds > 0)
@@ -79,6 +85,8 @@ public class ShopMenu : MonoBehaviour
             DeductDiamonds(diamondDecrease);
         }
     }
+    
+    // TODO Nakoupení vylepšení ceny
     public void BuyTowerPriceUpgrade()
     {
         if(variables.diamonds > 0)

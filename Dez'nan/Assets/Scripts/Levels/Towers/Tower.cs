@@ -23,7 +23,7 @@ public abstract class Tower : MonoBehaviour
     [SerializeField] protected GameObject missilePrefab;
     [SerializeField] protected Transform objectToRotate; // TODO Objekt, který bude rotovat směrem k nepříteli
     
-    [SerializeField] protected Transform target;
+    protected Transform target;
 
     protected bool canBeBought(int coins)
     {
@@ -34,7 +34,7 @@ public abstract class Tower : MonoBehaviour
 protected void UpdateTarget()
 {
     GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag); //TODO Vytvoření pole nepřátel, kteří jsou vyhledáni podle Tagu
-    float shortestDistanceToEnemy = Mathf.Infinity;
+    float shortestDistanceToEnemy = Mathf.Infinity; // TODO Na začátku nevím, kde jsou nepřátelé, takže podobně jako u algoritmů pro grafu nastavím nejbližšímu "vrcholu" (nepříteli) nekonečnou vzdálenost od věže
     GameObject theEnemyICurrentlySee = null;
 
     //TODO Procházení pole nepřátel a hledání aktuálního nejbližšího nepřítele
@@ -111,8 +111,6 @@ public virtual void SetTargetAndSpeedOfProjectile(Vector3 interceptPoint)
     
 }
 
-// TODO Část kódu, která se nachází pod tímto komentářem byla inspirována zdrojem ChatGPT
-
 // TODO Střílení věže
 public virtual void Shoot()
 {
@@ -125,8 +123,10 @@ public virtual void Shoot()
     SetTargetAndSpeedOfProjectile(interceptPoint);
 }
 
+// TODO Část kódu, která se nachází pod tímto komentářem byla trochu inspirována zdrojem ChatGPT, tím myšlen výpočet "bodu protnutí"
+
 // TODO Výpočet "bodu protnutí" mezi nepřítelem a projektilem
-private Vector3 CalculateInterceptPoint(Vector3 shooterPosition, Vector3 shooterVelocity, Vector3 targetPosition, Vector3 targetVelocity, float projectileSpeed)
+public Vector3 CalculateInterceptPoint(Vector3 shooterPosition, Vector3 shooterVelocity, Vector3 targetPosition, Vector3 targetVelocity, float projectileSpeed)
 {
     // TODO Výpočet vzdálenosti mezi pozicemi objektů (cíle a věže)
     Vector3 relativePosition = targetPosition - shooterPosition;
@@ -139,7 +139,7 @@ private Vector3 CalculateInterceptPoint(Vector3 shooterPosition, Vector3 shooter
     // TODO Vypočtení "bodu protnutí"
     return targetPosition + (targetVelocity * timeToIntercept);
 }
-private Vector3 PredictTargetPosition(Vector3 targetPosition, Vector3 targetVelocity)
+protected Vector3 PredictTargetPosition(Vector3 targetPosition, Vector3 targetVelocity)
 {
     // TODO Za předpokladu, že se cíl pohybuje konstantně se dá předpokládat, kde zhruba za nějaký čas bude
     return targetPosition + targetVelocity * Time.deltaTime;

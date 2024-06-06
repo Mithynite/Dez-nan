@@ -10,6 +10,8 @@ public class ArcherTower : Tower
         TurnAgainstYourEnemy();
         CallShooting();
     }
+    
+    // TODO Tvorba prefabu projektilu
     public override void SetTargetAndSpeedOfProjectile(Vector3 interceptPoint)
     {
         // TODO Vytvoření Prefabu projektilu

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a65ed0ee663f14b8098ca1f76834cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptTextKey: 101
   XSpawnRange: 21
   ZSpawnRange: 5
   variables: {fileID: 11400000, guid: 71eeab33b279bd940a678bb7885dac6a, type: 2}
@@ -485,63 +486,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &191886473
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2669523911818093330, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_Name
-      value: Mortar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 199.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 105
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863977721897532025, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
 --- !u!1 &212053605
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279792005}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Spawnpoint
   m_TagString: PlayerSpawnPoint
   m_Icon: {fileID: 0}
@@ -1446,7 +1390,7 @@ GameObject:
   - component: {fileID: 874739793}
   - component: {fileID: 874739792}
   - component: {fileID: 874739791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Battlefield
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2296,7 +2240,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2401,7 +2345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2866,9 +2810,9 @@ MonoBehaviour:
   buildMenuPanel: {fileID: 220801586}
   towerPrefabs:
   - {fileID: 3189840570914378805, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-  - {fileID: 2669523911818093330, guid: 0c5b4e7c80c9a074a84f133e59d26b00, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5468719899930754321, guid: c75c40011f3cebd4f9fedbb066f17dc0, type: 3}
+  - {fileID: 3809180214928685359, guid: 09f41f81b2ffe6b45a5e7bbb3ac8cbd6, type: 3}
+  - {fileID: 2498780633832508388, guid: c81e33c0063a39647b6a8d73f13d1ae7, type: 3}
   archerTowerPriceObject: {fileID: 1604275553}
   mortarTowerPriceObject: {fileID: 125254008}
   mageTowerPriceObject: {fileID: 289799190}
@@ -3461,63 +3405,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637706569}
   m_CullTransparentMesh: 1
---- !u!1001 &1759063452
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 241.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1457355061537408221, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189840570914378805, guid: a7b765369caa9674eadccb33683d2274, type: 3}
-      propertyPath: m_Name
-      value: ArcherTower
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a7b765369caa9674eadccb33683d2274, type: 3}
 --- !u!1 &1889327131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +3788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75948a4de054b4bae5a974496d365b, type: 2}
+  - {fileID: 2100000, guid: b7eb9696f2448024ab323254126f0448, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4075,5 +3962,3 @@ SceneRoots:
   - {fileID: 157562045}
   - {fileID: 717665249}
   - {fileID: 1509788433}
-  - {fileID: 191886473}
-  - {fileID: 1759063452}

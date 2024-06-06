@@ -695,7 +695,7 @@ MonoBehaviour:
   shootKey: 323
   shootForce: 1
   shootUpwardForce: 0
-  damage: 200
+  damage: 15
 --- !u!1 &389769836
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f430ccfbef881354e815bac4f9fe2175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: 0
 --- !u!1 &503767636
 GameObject:
   m_ObjectHideFlags: 0
@@ -7701,7 +7700,6 @@ MonoBehaviour:
   sensitivityX: 200
   sensitivityY: 200
   orientation: {fileID: 9131192827427805753}
-  c: {fileID: 6898741648685414755}
   player: {fileID: 3257116943395985170}
 --- !u!33 &6918779321463780404
 MeshFilter:
@@ -8342,7 +8340,7 @@ Transform:
   m_GameObject: {fileID: 1539357884265137721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 176.9, y: 5.58, z: 104.3}
+  m_LocalPosition: {x: 167.1, y: 5.58, z: 210.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

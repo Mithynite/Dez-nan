@@ -148,4 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 5
   tag: Ground
-  selectedTowerPrefab: {fileID: 0}
+  playerBehaviorVariables: {fileID: 11400000, guid: 71eeab33b279bd940a678bb7885dac6a, type: 2}

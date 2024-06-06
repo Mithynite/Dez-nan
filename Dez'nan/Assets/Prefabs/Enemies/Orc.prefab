@@ -399,7 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 120
   damage: 45
-  takenLifes: 2
+  takenLifes: 3
   defensePercentage: 5
   coinsEarnedAfterDeath: 3
 --- !u!54 &6911084983246330939
